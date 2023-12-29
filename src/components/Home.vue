@@ -1,26 +1,81 @@
-<script setup>
+<script>
+export default {
+  data() {
+    return {
+      currentSlide: 0,
+      slides: [
+        '../../public/img/08.jpg',
+        '../../public/img/09.jpg',
+        '../../public/img/10.jpg',
+      ],
+    };
+  },
+  mounted() {
+    this.startSlider();
+  },
+  methods: {
+    startSlider() {
+        setInterval(() => {
+            this.nextSlide();
+        }, 3500);
+    },
+    nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.slides.length;
 
+        // Oculta la imagen actual
+        const currentImage = this.$refs.sliderImage;
+        if (currentImage) {
+            currentImage.style.opacity = 0;
+        }
+
+        // Cambia el índice de la diapositiva
+        this.currentSlide = nextIndex;
+
+        // Muestra la nueva imagen después de un breve retraso
+        setTimeout(() => {
+            if (currentImage) {
+                currentImage.style.opacity = 1;
+            }
+        },300);
+    },
+},
+
+};
 </script>
+
 
 <template>
     <section>
+
+        <!--SECTION SLIDER-->
         <div class="slider">
             <div class="profile-info">
                 <div class="text">
                     <h2>Elkin Esteban González</h2>
                     <span>Photographer</span>
-                </div>
-                
+                </div>            
             </div>
-            <div class="slider-item">
-                <img src="../../public/img/08.jpg" alt="">
+            <div class="slider-item">   
+                <img v-if="slides.length" :src="slides[currentSlide]" alt="" ref="sliderImage">
                 <div class="overlay"></div>
+            </div>
+        </div>
+
+        <!--SECTION PROFILE-->
+        <div class="profile">
+            <div class="img-profile">
+                <img src="" alt="">
             </div>
         </div>
     </section>
 </template>
-<style scoped>
 
+
+<style scoped>
+    section{
+        width: 100%;
+        height: auto;
+    }
  
     .slider {
         position: relative;
@@ -44,7 +99,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 10px;
+    padding: 20px;
     position: relative;
 }
 
@@ -52,9 +107,9 @@
     .profile-info .text:after{
         content: "";
         position: absolute;
-        width: 10px;
-        height: 10px; 
-        border: 2px solid white;
+        width: 20px;
+        height: 20px; 
+        border: 3px solid white;
     }
 
     .profile-info .text:before {
@@ -75,7 +130,7 @@
 
 
     .profile-info .text h2{
-        font-size: 40px;
+        font-size: 50px;
         font-weight: 800;
         color: white;
         margin: 0;
@@ -84,7 +139,7 @@
         line-height: 48px;
     }
     .profile-info .text span{
-        font-size: 14px;
+        font-size: 20px;
         font-weight: 800;
         color: white;
         text-transform: uppercase;
@@ -104,7 +159,9 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        transition: opacity 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95);
     }
+
 
     .slider-item .overlay {
         content: "";
@@ -115,5 +172,20 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad ajustable */
         z-index: 1;
+    }
+
+
+    /*section prifile */
+    section .profile{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section .profile .img-profile{
+        width: 300px;
+        height: 300px;
+        background-color: aqua;
+        border-radius: 50%;
     }
 </style>
