@@ -64,8 +64,15 @@ export default {
         <!--SECTION PROFILE-->
         <div class="profile">
             <div class="img-profile">
-                <img src="" alt="">
             </div>
+            
+        </div>
+
+        <div class="texto">
+            <div class="description">
+                <h2>Photography has become my language to express my thinking, emotions to people. I love working with people's life style. I love Photography.</h2>
+            </div>
+            
         </div>
     </section>
 </template>
@@ -77,6 +84,7 @@ export default {
         height: auto;
     }
  
+    /*SECTION SLIDER */
     .slider {
         position: relative;
         
@@ -175,17 +183,47 @@ export default {
     }
 
 
-    /*section prifile */
+
+    
+    /*SECTION IMAGE PROFILE */
     section .profile{
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
     section .profile .img-profile{
-        width: 300px;
-        height: 300px;
-        background-color: aqua;
+        width: 350px;
+        height: 350px;
         border-radius: 50%;
+        position: absolute;
+        z-index: 2;
+        background-image: url('../../public/img/profile.jpg');
+        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+        background-position: center; /* Centra la imagen en el contenedor */
+        background-repeat: no-repeat; /* Evita la repetición de la imagen */
     }
+   
+
+
+
+    /* SECTION DESCRIPTION PROFILE */
+   section .texto{
+    margin: 200px 100px 20px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   section .texto .description{
+    width: 40%;
+    text-align: center;
+   }
+   section .texto .description h2{
+    font-size: 26px;
+    color: white;
+    font-weight: 800;
+    line-height: 1.2;
+   }
+   
 </style>
