@@ -4,9 +4,9 @@ export default {
     return {
       currentSlide: 0,
       slides: [
-        '../../public/img/08.jpg',
-        '../../public/img/09.jpg',
-        '../../public/img/10.jpg',
+        'img/08.jpg',
+        'img/09.jpg',
+        'img/10.jpg',
       ],
     };
   },
