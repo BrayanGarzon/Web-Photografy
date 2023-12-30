@@ -72,7 +72,9 @@ export default {
             <div class="description">
                 <h2>Photography has become my language to express my thinking, emotions to people. I love working with people's life style. I love Photography.</h2>
             </div>
-            
+            <div class="firma">
+                <img src="../../public/img/sign.png" alt="">
+            </div>
         </div>
     </section>
 </template>
@@ -214,6 +216,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
    }
    section .texto .description{
     width: 40%;
@@ -225,5 +228,10 @@ export default {
     font-weight: 800;
     line-height: 1.2;
    }
-   
+   section .texto .firma{
+    margin-top: 20px;
+   }
+   section .texto .firma img{
+    width: 200px;
+   }
 </style>

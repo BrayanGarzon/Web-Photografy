@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Montserrat:wght@400;600;700;800&family=Red+Hat+Text:wght@700&family=Unna:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Love+Light&family=Manrope:wght@800&family=Montserrat:wght@400;600;700;800&family=Red+Hat+Text:wght@700&family=Unna:wght@400;700&display=swap');
+
 
 :root{
 
   --font-family: 'Unna', serif;
+  --font-family-footer: 'Love Light', cursive;
 
   --background-body: #0C0D0C;
 
   --color-secundary: #222323;
+
+
+  --color-icons-primary: #989899;
+  --color-icons-secundary: #fff;
 
 
   --margin-divs: 0px 100px 0px 100px;
