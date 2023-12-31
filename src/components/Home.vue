@@ -68,12 +68,36 @@ export default {
             
         </div>
 
+        <!--SECTION DESCRIPTION PROFILE-->
         <div class="texto">
             <div class="description">
                 <h2>Photography has become my language to express my thinking, emotions to people. I love working with people's life style. I love Photography.</h2>
             </div>
             <div class="firma">
                 <img src="../../public/img/sign.png" alt="">
+            </div>
+        </div>
+
+
+        <!--SECTION CARDS-->
+        <div class="container-cards">
+            <div class="gallery-wrap">
+                <img src="../../public/img/gallery-1.jpg" alt="">
+            </div>
+            <div class="gallery-wrap">
+                <img src="../../public/img/gallery-2.jpg" alt="" style="margin-top: -100px;;">
+            </div>
+            <div class="gallery-wrap">
+                <img src="../../public/img/gallery-3.jpg" alt="">
+            </div>
+            <div class="gallery-wrap">
+                <img src="../../public/img/gallery-4.jpg" alt="" style="margin-top: -400px;">
+            </div>
+            <div class="gallery-wrap">
+                <img src="../../public/img/gallery-6.jpg" alt="" style="margin-top: -100px;">
+            </div>
+            <div class="gallery-wrap">
+                <img src="../../public/img/gallery-5.jpg" alt="" style="margin-top: -100px;">
             </div>
         </div>
     </section>
@@ -234,4 +258,24 @@ export default {
    section .texto .firma img{
     width: 200px;
    }
+
+
+
+   /* SECTION GALLERY */
+   section .container-cards{
+    display: flex;
+    flex-wrap: wrap;
+
+    
+    justify-content: center;
+    align-items: center;
+    margin: 40px 400px 20px 400px;
+    
+   }
+   section .container-cards .gallery-wrap > img{
+    width: 450px;
+    margin: 30px;
+   }
+
+   
 </style>

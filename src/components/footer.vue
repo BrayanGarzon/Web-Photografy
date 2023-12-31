@@ -23,7 +23,7 @@ export default {
             <a href=""><i class="fa-brands fa-instagram"></i></a>
             <a href=""><i class="fa-brands fa-pinterest"></i></a>
         </div>
-        <p><span>&copy;</span> {{ currentYear }} EAGAF | Photography by <a href="www.brayangarzon.site" target="_blank">Brayan Garzón</a></p>
+        <p><span>&copy; </span> All rights reserved {{ currentYear }} EAGAF | Photography by <a href="www.brayangarzon.site" target="_blank">Brayan Garzón</a></p>
     </footer>
 </template>
 
