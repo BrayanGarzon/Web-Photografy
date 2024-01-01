@@ -83,21 +83,45 @@ export default {
         <div class="container-cards">
             <div class="gallery-wrap">
                 <img src="../../public/img/gallery-1.jpg" alt="">
+                <div class="gallery-content">
+                    <h3>Everything for <br> the comfort of your <br> bedroom</h3>
+                    <a href="img/gallery-1.jpg" class="gallery-link img-popup" target="_blank">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="gallery-wrap">
-                <img src="../../public/img/gallery-2.jpg" alt="" style="margin-top: -100px;;">
+            <div class="gallery-wrap" id="gallery-2">
+                <img  src="../../public/img/gallery-2.jpg" alt="">
+                <div class="gallery-content">
+                    <h3>Everything for <br> the comfort of your <br> bedroom</h3>
+                    <a href="img/gallery-2.jpg" class="gallery-link img-popup" target="_blank">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
             <div class="gallery-wrap">
                 <img src="../../public/img/gallery-3.jpg" alt="">
+                <div class="gallery-content">
+                    <h3>Everything for <br> the comfort of your <br> bedroom</h3>
+                    <a href="img/gallery-3.jpg" class="gallery-link img-popup" target="_blank">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="gallery-wrap">
-                <img src="../../public/img/gallery-4.jpg" alt="" style="margin-top: -400px;">
+            <div class="gallery-wrap" id="gallery-4">
+                <img  src="../../public/img/gallery-4.jpg" alt="">
+                <div class="gallery-content">
+                    <h3>Everything for <br> the comfort of your <br> bedroom</h3>
+                    <a href="img/gallery-4.jpg" class="gallery-link img-popup" target="_blank">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="gallery-wrap">
-                <img src="../../public/img/gallery-6.jpg" alt="" style="margin-top: -100px;">
+            <div class="gallery-wrap" id="gallery-6">
+                <img  src="../../public/img/gallery-6.jpg" alt="">
+                <div class="gallery-content">
+                    <h3>Everything for <br> the comfort of your <br> bedroom</h3>
+                    <a href="img/gallery-6.jpg" class="gallery-link img-popup" target="_blank">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
-            <div class="gallery-wrap">
-                <img src="../../public/img/gallery-5.jpg" alt="" style="margin-top: -100px;">
+            <div class="gallery-wrap" id="gallery-5">
+                <img  src="../../public/img/gallery-5.jpg" alt="">
+                <div class="gallery-content">
+                    <h3>Everything for <br> the comfort of your <br> bedroom</h3>
+                    <a href="img/gallery-5.jpg" class="gallery-link img-popup" target="_blank">Explore <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -265,17 +289,64 @@ export default {
    section .container-cards{
     display: flex;
     flex-wrap: wrap;
-
-    
     justify-content: center;
     align-items: center;
     margin: 40px 400px 20px 400px;
     
    }
+   section .container-cards .gallery-wrap{
+    position: relative;
+   }
    section .container-cards .gallery-wrap > img{
     width: 450px;
     margin: 30px;
+    opacity: 0.5;
    }
 
+   
+   .container-cards #gallery-2{
+        margin-top: -100px;
+    }
+    .container-cards #gallery-4{
+        margin-top: -400px;
+    }
+    .container-cards #gallery-6{
+        margin-top: -100px;
+    }
+    .container-cards #gallery-5{
+        margin-top: -200px;
+    }
+
+
+   section .container-cards .gallery-wrap .gallery-content{
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+   }
+   section .container-cards .gallery-wrap .gallery-content h3{
+    font-size: 28px;
+    color: white;
+    line-height: 1.3;
+    margin: 0;
+   }
+   section .container-cards .gallery-wrap .gallery-content a{
+    margin-top: 10px;
+    color: var(--color-icons-primary);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+   }
+   section .container-cards .gallery-wrap .gallery-content a:hover{
+    color: white;
+    margin-left: 5px;
+   }
+   section .container-cards .gallery-wrap .gallery-content a > i{
+    margin-left: 5px;
+    cursor: pointer;
+   }
    
 </style>

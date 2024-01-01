@@ -37,13 +37,15 @@ export default {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
     footer h2{
         font-family: var(--font-family-footer);
         color: white;
         margin: 0;
         padding: 0;
-        font-size: 40px;
+        font-size: 50px;
     }
 
     footer .icons{
