@@ -23,7 +23,7 @@ export default {
             <a href=""><i class="fa-brands fa-instagram"></i></a>
             <a href=""><i class="fa-brands fa-pinterest"></i></a>
         </div>
-        <p><span>&copy; </span> All rights reserved {{ currentYear }} EAGAF | Photography by <a href="www.brayangarzon.site" target="_blank">Brayan Garzón</a></p>
+        <p><span>&copy; </span> All rights reserved {{ currentYear }} EAGAF - Photography <br> Desarrollado por <a href="www.brayangarzon.site" target="_blank">Brayan Garzón</a></p>
     </footer>
 </template>
 
@@ -46,6 +46,7 @@ export default {
         margin: 0;
         padding: 0;
         font-size: 50px;
+        text-transform: uppercase;
     }
 
     footer .icons{
@@ -74,6 +75,7 @@ export default {
     footer > p{
         color: white;
         margin: 0;
+        text-align: center;
         
     }
     footer p > a{
@@ -85,5 +87,12 @@ export default {
     }
     span{
         color: brown;
+    }
+
+
+    @media screen and (max-width: 600px){
+        footer{
+            width: 100%;
+        }
     }
 </style>

@@ -102,6 +102,7 @@ export default {
                     <a href="img/gallery-3.jpg" class="gallery-link img-popup" target="_blank">Explore <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
+
             <div class="gallery-wrap" id="gallery-4">
                 <img  src="../../public/img/gallery-4.jpg" alt="">
                 <div class="gallery-content">
@@ -109,6 +110,7 @@ export default {
                     <a href="img/gallery-4.jpg" class="gallery-link img-popup" target="_blank">Explore <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
+
             <div class="gallery-wrap" id="gallery-6">
                 <img  src="../../public/img/gallery-6.jpg" alt="">
                 <div class="gallery-content">
@@ -116,6 +118,7 @@ export default {
                     <a href="img/gallery-6.jpg" class="gallery-link img-popup" target="_blank">Explore <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
+
             <div class="gallery-wrap" id="gallery-5">
                 <img  src="../../public/img/gallery-5.jpg" alt="">
                 <div class="gallery-content">
@@ -153,13 +156,13 @@ export default {
     }
 
     .profile-info .text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    position: relative;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+    }
 
     .profile-info .text:before,
     .profile-info .text:after{
@@ -250,9 +253,9 @@ export default {
         position: absolute;
         z-index: 2;
         background-image: url('../../public/img/profile.jpg');
-        background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
-        background-position: center; /* Centra la imagen en el contenedor */
-        background-repeat: no-repeat; /* Evita la repetición de la imagen */
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat;
     }
    
 
@@ -349,4 +352,78 @@ export default {
     cursor: pointer;
    }
    
+
+   @media only screen and (max-width:600px){
+        .slider{
+            width: 100%;
+            height: auto;
+        }
+
+
+        .profile-info .text{
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+        }
+        .profile-info .text h2{
+            font-size: 26px;
+            line-height: 20px;
+        }
+
+
+
+
+
+        /*SECTION IMAGE PROFILE */
+
+        section .profile .img-profile{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        section .texto{
+            margin: 0;
+            width: 100%;
+        }
+        section .texto .description{
+            width: 100%;
+        }
+        section .texto .description h2{
+            margin: 20px 10px;
+        }
+
+
+
+
+        /* SECTION GALLERY */
+
+        section .container-cards{
+            margin: 20px 10px;
+        }
+        section .container-cards .gallery-wrap > img{
+            width: 320px;
+        }
+
+        .container-cards #gallery-2{
+            margin-top: 0;
+        }
+        .container-cards #gallery-4{
+            margin-top: 0;
+        }
+        .container-cards #gallery-6{
+            margin-top: 0;
+        }
+        .container-cards #gallery-5{
+            margin-top: 0;
+        }
+
+        section .container-cards .gallery-wrap .gallery-content{
+            margin-left: 50px;
+        }
+        section .container-cards .gallery-wrap .gallery-content h3{
+            font-size: 20px;
+        }
+    }
 </style>
