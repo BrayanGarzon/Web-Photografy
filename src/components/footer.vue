@@ -95,4 +95,10 @@ export default {
             width: 100%;
         }
     }
+
+    @media only screen and (max-width: 768px){
+        footer > p{
+            font-size: 20px;
+        }
+    }
 </style>

@@ -147,7 +147,7 @@ export default {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 2; /* Ajusta según sea necesario para colocar el perfil por encima del slider */
+        z-index: 2;
         width: 100%;
         height: 100%;
         display: flex;
@@ -353,7 +353,8 @@ export default {
    }
    
 
-   @media only screen and (max-width:600px){
+   /* MOBILE */
+   @media only screen and (max-width: 600px){
         .slider{
             width: 100%;
             height: auto;
@@ -425,5 +426,61 @@ export default {
         section .container-cards .gallery-wrap .gallery-content h3{
             font-size: 20px;
         }
+    }
+
+
+
+    /* TABLET */
+    @media only screen and (max-width: 768px){
+
+        /* SECTION DESCRIPTION PROFILE */
+    section .texto{
+        margin: 200px 20px 0px 20px;
+        width: auto;
+    }
+    section .texto .description{
+        width: 100%;
+        text-align: center;
+    }
+    section .texto .description h2{
+        font-size: 30px;
+    }
+    section .texto .firma img{
+        width: 250px;
+    }
+
+
+
+    /* SECTION GALLERY */
+    section .container-cards{
+        margin: 0;
+        
+    }
+    section .container-cards .gallery-wrap > img{
+        width: 550px;
+        margin: 30px;
+        opacity: 0.5;
+    }
+    .container-cards #gallery-2{
+        margin-top: 0;
+    }
+    .container-cards #gallery-4{
+        margin-top: 0;
+    }
+    .container-cards #gallery-6{
+        margin-top: 0;
+    }
+    .container-cards #gallery-5{
+        margin-top: 0;
+    }
+    }
+
+
+    /*LAPTOP AND LARGE SCREEN*/
+    @media only screen and (min-width: 992px)  and (max-width: 1200px){
+    section .container-cards{
+        width: 100%;
+        margin: 40px 0px;
+    } 
     }
 </style>
